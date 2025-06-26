@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary - {{ filename }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-balance-scale"></i> Legal Document Summarizer</h1>
+            <p class="tagline">Transform complex legal documents into concise, readable summaries</p>
+        </header>
+        
+        <h2><i class="fas fa-file-alt"></i> {{ filename }}</h2>
+        
+        <div class="summary-container">
+            <h3><i class="fas fa-compress-alt"></i> Summary</h3>
+            <div class="summary-text">
+                {{ summary }}
+            </div>
+        </div>
+        
+        <div class="original-container">
+            <h3><i class="fas fa-align-left"></i> Original Text</h3>
+            <div class="original-text">
+                <pre>{{ original_text }}</pre>
+            </div>
+        </div>
+        
+        <a href="/" class="back-button"><i class="fas fa-arrow-left"></i> Back to Upload</a>
+        
+        <footer>
+            <p>&copy; 2023 Legal Document Summarizer | Powered by AI</p>
+        </footer>
+    </div>
+</body>
+</html>
